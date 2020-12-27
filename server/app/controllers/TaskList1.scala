@@ -7,6 +7,7 @@ import javax.inject._
 @Singleton
 class TaskList1 @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
   def taskList = Action {
-    Ok("This Works!")
+    val tasks = List("task 1", "task 2", "task 3")
+    Ok(views.html.taskList1(tasks))
   }
 }

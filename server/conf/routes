@@ -4,6 +4,9 @@
 
 # Home page
 GET     /                 	controllers.Application.index
+GET     /productsArgs       controllers.Application.product(prodType, prodNumber: Int)
+GET     /product/:prodType/:prodNumber       controllers.Application.product(prodType, prodNumber: Int)
+GET     /productRE/$prodType<[a-z]{2}\d\d>/:prodNumber       controllers.Application.product(prodType, prodNumber: Int)
 
 GET     /taskList1          controllers.TaskList1.taskList
 
